@@ -1,0 +1,50 @@
+{
+  "name": "foco",
+  "productName": "Foco",
+  "version": "1.0.0",
+  "description": "Cronômetro de estudo com tags, calendário e insights",
+  "main": "main.js",
+  "homepage": "https://localhost/foco",
+  "author": {
+    "name": "João",
+    "email": "joao@localhost"
+  },
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux"
+  },
+  "keywords": [
+    "foco",
+    "pomodoro",
+    "estudo",
+    "produtividade"
+  ],
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.joao.foco",
+    "productName": "Foco",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "style.css",
+      "script.js",
+      "main.js",
+      "icon.png"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "icon.png",
+      "maintainer": "João <joao@localhost>"
+    }
+  }
+}

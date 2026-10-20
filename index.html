@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css">
+<title>Foco – agenda de estudo por tags</title>
+</head>
+<body>
+<header><h1>Foco</h1>
+<nav><button class="on" data-a="view" data-v="hoje">Hoje</button><button data-a="view" data-v="ins">Insights</button></nav>
+<button id="clr" data-a="clr" hidden>Limpar dados de exemplo</button></header>
+<main>
+<section id="v-hoje" class="view on grid">
+<div class="card"><div class="top"><button data-a="prev" aria-label="Mês anterior">‹</button><h3 id="mlabel"></h3><button data-a="next" aria-label="Próximo mês">›</button></div><div class="cal" id="cal"></div></div>
+<div style="display:grid;gap:20px">
+<div class="card"><div class="top"><h2 style="margin:0">Cronômetro</h2><div class="seg"><button class="on" data-a="mode" data-v="cron">Cronômetro</button><button data-a="mode" data-v="temp">Temporizador</button></div></div>
+<div class="chips" id="tags"></div><div id="form"></div>
+<div id="goal" hidden><label class="mut">Meta: <input id="gm" type="number" min="1" max="1440" inputmode="numeric"> min</label></div>
+<div class="flip" id="clock" aria-live="off"></div><p class="mut" id="hint" style="text-align:center;margin:0 0 16px"></p>
+<div class="btns"><button class="pri" id="go" data-a="go">Iniciar</button><button id="stop" data-a="stop">Finalizar e salvar</button></div></div>
+<div class="card"><h2 id="dlabel"></h2><div id="sess"></div><textarea id="note" placeholder="O que você fez neste dia? Escreva uma nota."></textarea></div>
+</div>
+</section>
+<section id="v-ins" class="view ins">
+<div class="full top"><div class="seg"><button data-a="per" data-v="dia">Dia</button><button class="on" data-a="per" data-v="sem">Semana</button><button data-a="per" data-v="mes">Mês</button></div><span class="mut">Sempre comparado ao período anterior</span><button id="dl" data-a="dlopen">Baixar insights do mês</button></div>
+<div class="card full" id="dlp" hidden><h2>Baixar insights de <span id="dlm"></span></h2>
+<p class="mut">O que incluir na imagem</p><div class="chips" id="dlo"></div>
+<p class="mut">Formato</p><div class="chips" id="dlf"></div>
+<div class="btns" style="margin-top:16px"><button class="pri" data-a="dlgo">Baixar imagem</button></div></div>
+<div class="full kpis" id="kpis"></div>
+<div class="card"><h2>Tempo por tag</h2><div class="donut" id="donut"></div></div>
+<div class="card"><h2>Atual x anterior, por tag</h2><div id="cmp"></div><p class="mut" style="margin:0">Cor forte é o período atual; cor clara é o anterior.</p></div>
+<div class="card full"><h2>Tempo por dia</h2><div id="bars"></div></div>
+<div class="card full"><h2>Dias estudados neste mês</h2><div class="heat" id="heat"></div></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

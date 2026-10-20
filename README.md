@@ -77,7 +77,3 @@ foco/
 
 - HTML, CSS e JavaScript puros, sem frameworks e sem dependências no navegador.
 - [Electron](https://www.electronjs.org/) e [electron-builder](https://www.electron.build/) para o app de desktop.
-
-## Licença
-
-Escolha uma licença para o projeto (por exemplo, [MIT](https://choosealicense.com/licenses/mit/)) e adicione o arquivo `LICENSE`.
